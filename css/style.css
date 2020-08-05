@@ -1,2 +1,285 @@
+* {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+		box-sizing: border-box;
+}
+
+:focus,
+:active {
+		outline: none;
+}
+
+a:focus,
+a:active {
+		outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+		display: block;
+}
+
+html,
+body {
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 14px;
+		-ms-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+		font-family: inherit;
+}
+
+input::-ms-clear {
+		display: none;
+}
+
+button {
+		cursor: pointer;
+}
+
+button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+}
+
+a,
+a:visited {
+		text-decoration: none;
+}
+
+a:hover {
+		text-decoration: none;
+}
+
+ul li {
+		list-style: none;
+}
+
+img {
+		vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+		font-size: inherit;
+		font-weight: inherit;
+}
+
+@font-face {
+		font-family: "BannyBold";
+		src: url("../fonts/Banny-BoldRound.otf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+		font-family: "BannyLight";
+		src: url("../fonts/Banny-LightRound.otf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+		font-family: "Banny";
+		src: url("../fonts/Banny-Round.otf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+		font-family: "OpenSans-Regular";
+		src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+.container {
+		width: 89%;
+		margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+		font-family: "Banny";
+}
+
+body {
+		font-family: "OpenSans-Regular";
+}
+
+.header {
+		position: relative;
+		background: url(../img/header-bg.png) no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		width: 100%;
+		height: 100vh;
+}
+
+.main {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+}
+
+.wrapper-navigation {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+}
+
+.navigation nav {
+		position: relative;
+}
+.navigation nav::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navigation_link {
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 133px;
+		height: 100px;
+		font-family: "OpenSans-Regular";
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 18px;
+		color: #FFFFFF;
+}
+
+.logo {
+		position: relative;
+}
+.logo_header {
+		position: relative;
+		top: 50px;
+}
+
+.wrapper-main {
+		position: relative;
+		margin: 260px 0px 0px 0px;
+		display: flex;
+		align-items: center;
+}
+
+.information {
+		position: absolute;
+		left: -7%;
+		transform: rotate(-90deg);
+}
+.information_time-work {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 12px;
+		color: #FFFFFF;
+}
+
+.title {
+		position: relative;
+		margin: 0 auto;
+		text-align: center;
+}
+.title_name {
+		position: relative;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 0.5em;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		text-align: center;
+}
+.title_header-title {
+		color: #fff;
+		margin: 20px 0px 0px 0px;
+		font-size: 96px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		text-align: center;
+}
+.title_header-title::after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		margin-top: 25px;
+		width: 60px;
+		height: 5.11px;
+		background: #E8C300;
+		border-radius: 50px;
+}
+.title_button {
+		position: relative;
+		width: 200px;
+		height: 60px;
+		margin: 30px 30px 0px 0px;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		background: none;
+		color: #fff;
+		font-weight: bold;
+		font-size: 12px;
+		transition: all 0.5s ease;
+}
+.title_button:hover {
+		background: #E8C300;
+}
+
+.link {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+}
+.link_social-media {
+		color: #fff;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		margin: 20px 0px 0px 0px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+}
+
+.link-down {
+		display: inline-block;
+		margin: 190px 0px 0px 0px;
+		display: flex;
+		justify-content: center;
+}
+.link-down_button {
+		color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

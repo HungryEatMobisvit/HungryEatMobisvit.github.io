@@ -1,0 +1,331 @@
+//!Обнуление
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+//!---------------------------*/
+
+// * IMPORT ======================================================================================================================
+
+@import "mixin.scss";
+@import "variables.scss";
+
+// *  ============================================================================================================================
+
+// * Подключаем шрифты ============================================================================================================
+
+@font-face {
+   font-family: 'BannyBold';
+   src: url("../fonts/Banny-BoldRound.otf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: 'BannyLight';
+   src: url("../fonts/Banny-LightRound.otf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: 'Banny';
+   src: url("../fonts/Banny-Round.otf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: 'OpenSans-Regular';
+   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+// * ==============================================================================================================================
+
+.container {
+   width: 89%;
+   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Banny';
+}
+
+body {
+   font-family: "OpenSans-Regular";
+}
+
+// * ==============================================================================================================================
+
+.header {
+   position: relative;
+   background: url(../img/header-bg.png)no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   width: 100%;
+   height: 100vh;
+
+}
+
+.main {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.wrapper-navigation {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navigation {
+
+   nav {
+      position: relative;
+
+
+      &::after {
+         content: "";
+         position: absolute;
+         display: block;
+         width: 100%;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+
+      }
+   }
+
+   &_link {
+      position: relative;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 133px;
+      height: 100px;
+
+      @include link-navigation;
+   }
+}
+
+.logo {
+   position: relative;
+
+   &_header {
+      position: relative;
+      top: 50px;
+   }
+}
+
+.wrapper-main {
+   position: relative;
+   margin: 260px 0px 0px 0px;
+   display: flex;
+   // justify-content: space-between;
+   align-items: center;
+}
+
+.information {
+   position: absolute;
+
+   left: -7%;
+   transform: rotate(-90deg);
+
+
+   &_time-work {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      color: #FFFFFF;
+   }
+}
+
+.title {
+   position: relative;
+   margin: 0 auto;
+   text-align: center;
+
+   &_name {
+      position: relative;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-align: center;
+   }
+
+   &_header-title {
+      color: $titleBannyColorBackgroundImg;
+      margin: 20px 0px 0px 0px;
+      font-size: 96px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-align: center;
+
+      &::after {
+         @include lineTitle;
+      }
+   }
+
+
+   &_button {
+      position: relative;
+
+      width: 200px;
+      height: 60px;
+      margin: 30px 30px 0px 0px;
+
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+
+      background: none;
+      color: #fff;
+
+      font-weight: bold;
+      font-size: 12px;
+
+      transition: all 0.5s ease;
+
+      &:hover {
+         background: #E8C300;
+      }
+
+   }
+
+}
+
+.link {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   &_social-media {
+      color: #fff;
+      font-size: 20px;
+
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      margin: 20px 0px 0px 0px;
+
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+   }
+
+}
+
+.link-down {
+   display: inline-block;
+   margin: 190px 0px 0px 0px;
+   display: flex;
+   justify-content: center;
+
+
+
+   &_button {
+      color: #fff;
+   }
+}

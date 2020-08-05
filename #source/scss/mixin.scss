@@ -1,0 +1,41 @@
+@mixin lineTitle {
+   content: "";
+   display: block;
+   margin: 0 auto;
+   margin-top: 25px;
+
+   width: 60px;
+   height: 5.11px;
+
+   background: #E8C300;
+   border-radius: 50px;
+}
+
+@mixin squareBackgroundWhite {
+   width: 250px;
+   height: 250px;
+
+   border: 20px solid #E8C300;
+   box-sizing: border-box;
+   filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+   border-radius: 5px;
+}
+
+@mixin squareBackgroundImg {
+   width: 250px;
+   height: 250px;
+
+   border: 20px solid #E8C300;
+   box-sizing: border-box;
+   filter: drop-shadow(0px 0px 100px #000000);
+   border-radius: 5px;
+}
+
+@mixin link-navigation {
+   font-family: "OpenSans-Regular";
+   font-style: normal;
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 18px;
+   color: #FFFFFF;
+}
